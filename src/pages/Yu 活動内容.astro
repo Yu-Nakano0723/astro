@@ -188,4 +188,39 @@
       .pic{position: relative
         top  100px
         left 100px 
-      }</style>
+      }
+      footer {
+  background-color: #24140e;   / 背景色 /
+  color: #ffffff;              / 文字色 /
+  padding: 20px;               / 内側余白 /
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; / 左右に配置 /
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;                / 中央寄せ /
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer nav ul li {
+  margin-left: 20px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+footer nav ul li a:hover {
+  color: #ff9800; / ホバー時に色が変わる */
+} 
+
+      </style>

@@ -63,7 +63,7 @@
        /* 下に行くほど透明になる */
        mask-image: linear-gradient(
       to bottom,
-       rgba(0, 0, 0, 1) 90%,
+       rgba(0, 0, 0, 1) 95%,
        rgba(0, 0, 0, 0) 100%);
        }
       
@@ -81,17 +81,17 @@
         
        }
       
-      .box{background-color: rgba(86, 84, 84, 0.484);
+      .box{background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         border-radius: 5%;
         font-size:50%;
         font-weight: 100;
-       max-width: min(600px, 90%);
+       max-width: min(800px, 90%);
       margin: 20px auto;
            font-size: 1rem;  /* ← 明示的に戻す */
       font-weight: 300;
       box-sizing: border-box;
-      -webkit-text-stroke: 1px rgb(202, 202, 164); /* 白いふち線 */
+      -webkit-text-stroke: 1px rgb(0, 0, 0); /* 白いふち線 */
        }
 
       .main{

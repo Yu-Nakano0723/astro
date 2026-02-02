@@ -1,4 +1,4 @@
-const swiper = new swiper('.swiper', {
+const swiper = new swiper('.Swiper', {
   loop: true,
   effect: 'fade',
   speed: 1000,

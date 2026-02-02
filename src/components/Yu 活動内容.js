@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const swiper = new swiper('.Swiper', {
   loop: true,
   effect: 'fade',
@@ -9,4 +10,5 @@ const swiper = new swiper('.Swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
 });

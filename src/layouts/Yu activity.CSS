@@ -1,16 +1,17 @@
 @charset "utf-8";
 
 .swiper {
-  width: 50%;
-  height: 500px; 
+  width: 100%;
+  height: 400px;   /* ← 必須 */
 }
 
-.swiper-wrapper,
 .swiper-slide {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper img {
+.swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;

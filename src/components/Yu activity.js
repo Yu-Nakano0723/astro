@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper', {
+    modules: [Swiper.Autoplay, Swiper.EffectFade, Swiper.Pagination],
     loop: true,
     effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
+    speed: 1000,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
-    speed: 1000,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

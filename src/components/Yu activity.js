@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.swiper', {
     loop: true,
-    effect: 'fade',
     speed: 1000,
     autoplay: {
       delay: 3000,

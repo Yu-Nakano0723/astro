@@ -23,7 +23,7 @@
 .swiper-wrapper {
   display: flex;
 }
-    header
+header
     {position:fixed;        /*画面上部に固定*/
      top:0px;
      left:0px;

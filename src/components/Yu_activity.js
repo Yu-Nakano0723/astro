@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const grid = new Swiper('.swiper-slide img', {
   loop: true,
   effect: 'fade',
   speed: 1000,

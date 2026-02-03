@@ -31,7 +31,7 @@ header
      left:0px;
      width:100%;            /*帯の長さ*/
      height:80px;           /*ヘッダーの文字下の空間*/
-     background-color:#333; /*帯の色*/
+     background-color:#64072A; /*帯の色*/
      color:white;         /*タイトルの文字の色*/ 
      display: flex;                  /* 横並びにする */
      align-items: center;    /* 垂直中央 */
@@ -51,7 +51,7 @@ header
       margin-left: auto;}
 
       #migi{
-        color:#1eff00;
+        color:#ffffff;
         text-decoration:none;
         margin-right: 15px;}
 

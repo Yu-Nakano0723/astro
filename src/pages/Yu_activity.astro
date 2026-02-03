@@ -128,16 +128,15 @@
   // @ts-nocheck
 
   /** @global */
-  const Swiper = window.Swiper;
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});
 
-  const swiper = new Swiper('.hero-swiper', {
-    loop: true,
-    effect: 'fade',
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-  });
 </script>
 
 

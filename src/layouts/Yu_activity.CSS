@@ -73,9 +73,9 @@ header
       color: black; /* 文字の塗りつぶし色 */
       -webkit-text-stroke: 1px white; /* 白いふち線 */}
 
-      .pic{position: relative
-        top  100px
-        left 100px 
+      .pic{position: relative;
+        top :100px;
+        left :100px; 
       }
       footer {
   background-color: #24140e;   /* 背景色 */

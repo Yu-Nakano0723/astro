@@ -47,10 +47,13 @@
          margin-top: 8px;
       }}
 
-      body{padding-top:50px;
+      body{padding-top:100px;
             margin:0
     }
       /*以上ヘッダー*/
+
+   .main{margin-left:50px;}
+   h2{background-color: rgb(201, 201, 201);}
 
       /* 以下フッダー */
 footer {

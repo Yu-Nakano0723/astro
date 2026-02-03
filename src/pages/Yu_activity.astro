@@ -5,6 +5,20 @@
 <title>東京理科大学,坊ちゃんサークル</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="/src/layouts/Yu_activity.css">
+<script>
+  // @ts-nocheck
+
+  /** @global */
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});
+
+</script>
 
 <script src="src\components\Yu_activity.js"></script>
 </head>
@@ -26,7 +40,7 @@
       <ul>
         <li>2026年度</li>
       </ul>
-      <div class="swiper">
+      <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <figure>
@@ -124,20 +138,7 @@
       </nav>
     </div>
   </footer>
-<script>
-  // @ts-nocheck
 
-  /** @global */
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-});
-
-</script>
 
 
 </body>

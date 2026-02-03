@@ -3,11 +3,15 @@ const swiper = new Swiper('.swiper', {
   effect: 'fade',
   speed: 1000,
   autoplay: {
-    delay: 3000
+    delay: 4000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  fadeEffect: {
+    crossFade: true,
   },
 });
 

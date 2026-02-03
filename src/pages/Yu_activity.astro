@@ -1,28 +1,146 @@
-<h1>活動内容</h1>
-
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="/activities.jpg" /></div>
-    <div class="swiper-slide"><img src="/contact.jpg" /></div>
-    <div class="swiper-slide"><img src="/governance.jpg" /></div>
-    <div class="swiper-slide"><img src="/kim_rogo.png" /></div>
-  </div>
-</div>
-
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="/activities.jpg" /></div>
-    <div class="swiper-slide"><img src="/contact.jpg" /></div>
-    <div class="swiper-slide"><img src="/governance.jpg" /></div>
-    <div class="swiper-slide"><img src="/kim_rogo.png" /></div>
-  </div>
-</div>
-
-<script type="module">
-  import Swiper from 'swiper';
-  import 'swiper/css';
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>東京理科大学,坊ちゃんサークル</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="/src/layouts/Yu_activity.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // @ts-nocheck
 
   document.querySelectorAll('.swiper').forEach(el => {
     new Swiper(el, {
-      l
-    })})
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+    });
+  });
+</script>
+
+
+
+</head>
+<body>
+    <!--ヘッダー-->
+    <header>
+      
+        <div class="logo">坊ちゃんサークル</div>
+        <nav>
+          <a href="/lukiahome" id="migi">HOME</a>
+          <a href="/Yu activity" id="migi">活動内容</a>
+          <a href="/aaa" id="migi">メンバー</a>
+          <a href="/lukiaGovernance" id="migi">組織</a>
+          <a href="#" id="migi">お問い合わせ</a>
+       </nav>
+    </header>
+    ---
+    import Swiper from 'swiper';
+    import 'swiper/css';
+    ---
+
+    <h1>活動内容</h1>
+      <ul>
+        <li>2026年度</li>
+      </ul>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="activities.jpg" width="200" height="300" alt="画像1">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="contact.jpg" width="200" height="300" alt="画像2">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="governance.jpg" width="200" height="300" alt="画像3">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="kim_rogo.png" width="200" height="300" alt="画像4">
+            </figure>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <ul>
+        <li>2026年度</li>
+      </ul>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="activities.jpg" width="200" height="300" alt="画像1">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="contact.jpg" width="200" height="300" alt="画像2">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="governance.jpg" width="200" height="300" alt="画像3">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="kim_rogo.png" width="200" height="300" alt="画像4">
+            </figure>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <ul>
+        <li>2026年度</li>
+      </ul>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="activities.jpg" width="200" height="300" alt="画像1">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="contact.jpg" width="200" height="300" alt="画像2">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="governance.jpg" width="200" height="300" alt="画像3">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="kim_rogo.png" width="200" height="300" alt="画像4">
+            </figure>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 TUSbotchanlab.website.</p>
+      <nav>
+        <ul>
+           <li><a href="/lukiahome">ホーム</a></li>
+          <li><a href="/Yu activity">活動内容</a></li>
+          <li><a href="/aaa">メンバー</a></li>
+          <li><a href="/lukiaGovernance">組織</a></li>
+           <li><a href="">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

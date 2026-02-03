@@ -124,6 +124,22 @@
       </nav>
     </div>
   </footer>
+<script>
+  // @ts-nocheck
+
+  /** @global */
+  const Swiper = window.Swiper;
+
+  const swiper = new Swiper('.hero-swiper', {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
 
 </body>
 </html>

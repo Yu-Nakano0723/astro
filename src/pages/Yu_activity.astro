@@ -5,6 +5,21 @@
 <title>東京理科大学,坊ちゃんサークル</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="/src/layouts/Yu_activity.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // @ts-nocheck
+
+  document.querySelectorAll('.swiper').forEach(el => {
+    new Swiper(el, {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+    });
+  });
+</script>
+
+
 
 </head>
 <body>
@@ -123,21 +138,5 @@
       </nav>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  // @ts-nocheck
-
-  document.querySelectorAll('.swiper').forEach(el => {
-    new Swiper(el, {
-      loop: true,
-      effect: 'fade',
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-    });
-  });
-</script>
 </body>
 </html>

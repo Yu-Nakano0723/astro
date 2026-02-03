@@ -5,17 +5,20 @@
 <title>東京理科大学,坊ちゃんサークル</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="/src/layouts/Yu_activity.css">
-<style>
-.swiper {
-  width: 600px;
-  height: 300px;
-}
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-</style>
+<script>
+  // @ts-nocheck
+
+  /** @global */
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});
+
+</script>
 
 <script src="src\components\Yu_activity.js"></script>
 </head>
@@ -37,25 +40,16 @@
       <ul>
         <li>2026年度</li>
       </ul>
-      <div class="swiper hero-swiper">
+      <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <figure>
               <img src="activities.jpg" width="200" height="300" alt="画像1">
-            </figure>
-          </div>
-          <div class="swiper-slide">
-            <figure>
+            
               <img src="contact.jpg" width="200" height="300" alt="画像2">
-            </figure>
-          </div>
-          <div class="swiper-slide">
-            <figure>
+            
               <img src="governance.jpg" width="200" height="300" alt="画像3">
-            </figure>
-          </div>
-          <div class="swiper-slide">
-            <figure>
+            
               <img src="kim_rogo.png" width="200" height="300" alt="画像4">
             </figure>
           </div>

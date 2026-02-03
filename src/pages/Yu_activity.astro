@@ -5,20 +5,17 @@
 <title>東京理科大学,坊ちゃんサークル</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="/src/layouts/Yu_activity.css">
-<script>
-  // @ts-nocheck
-
-  /** @global */
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-});
-
-</script>
+<style>
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
 
 <script src="src\components\Yu_activity.js"></script>
 </head>

@@ -5,22 +5,7 @@
 <title>東京理科大学,坊ちゃんサークル</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="/src/layouts/Yu_activity.css">
-<script>
-  // @ts-nocheck
 
-  /** @global */
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-});
-
-</script>
-
-<script src="src\components\Yu_activity.js"></script>
 </head>
 <body>
     <!--ヘッダー-->
@@ -43,15 +28,24 @@ const swiper = new Swiper('.swiper', {
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            
+            <figure>
               <img src="activities.jpg" width="200" height="300" alt="画像1">
-            
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
               <img src="contact.jpg" width="200" height="300" alt="画像2">
-            
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
               <img src="governance.jpg" width="200" height="300" alt="画像3">
-            
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
               <img src="kim_rogo.png" width="200" height="300" alt="画像4">
-
+            </figure>
           </div>
         </div>
 
@@ -129,8 +123,21 @@ const swiper = new Swiper('.swiper', {
       </nav>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<script>
+  // @ts-nocheck
 
-
+  document.querySelectorAll('.swiper').forEach(el => {
+    new Swiper(el, {
+      loop: true,
+      effect: 'fade',
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+  });
+</script>
 </body>
 </html>

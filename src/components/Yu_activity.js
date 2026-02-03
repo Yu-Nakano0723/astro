@@ -6,10 +6,7 @@ const swiper = new Swiper('.swiper', {
     delay: 4000,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+
   fadeEffect: {
     crossFade: true,
   },

@@ -20,10 +20,6 @@
           <a href="#" id="migi">お問い合わせ</a>
        </nav>
     </header>
-    ---
-    import Swiper from 'swiper';
-    import 'swiper/css';
-    ---
 
     <h1>活動内容</h1>
       <ul>
@@ -32,28 +28,30 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <figure>
+  
               <img src="activities.jpg" width="200" height="300" alt="画像1">
-            </figure>
+
           </div>
           <div class="swiper-slide">
-            <figure>
+
               <img src="contact.jpg" width="200" height="300" alt="画像2">
-            </figure>
+
           </div>
           <div class="swiper-slide">
-            <figure>
+
               <img src="governance.jpg" width="200" height="300" alt="画像3">
-            </figure>
+
           </div>
-          <div class="swiper-slide">
-            <figure>
-              <img src="kim_rogo.png" width="200" height="200" alt="画像4">
-            </figure>
-          </div>
+
         </div>
 
         <div class="swiper-pagination"></div>
+      </div>
+      <div class="radius">
+        <p>
+          ここになんか書く<br>
+          ex)行事,実験<br>
+        </p>
       </div>
       <ul>
         <li>2025年度</li>
@@ -75,15 +73,19 @@
               <img src="governance.jpg" width="200" height="300" alt="画像3">
             </figure>
           </div>
-          <div class="swiper-slide">
-            <figure>
-              <img src="kim_rogo.png" width="200" height="300" alt="画像4">
-            </figure>
-          </div>
+
         </div>
 
         <div class="swiper-pagination"></div>
       </div>
+      <div class="radius">
+        <p>
+          4月:新入生歓迎会<br>
+          5月:実験<br>
+          8~9月:来年度のigemテール決め<br>
+          2月:合宿<br>
+        </p>
+        </div>
       <ul>
         <li>2024年度</li>
       </ul>
@@ -104,14 +106,16 @@
               <img src="governance.jpg" width="200" height="300" alt="画像3">
             </figure>
           </div>
-          <div class="swiper-slide">
-            <figure>
-              <img src="kim_rogo.png" width="200" height="100" alt="画像4">
-            </figure>
-          </div>
+
         </div>
 
         <div class="swiper-pagination"></div>
+      </div>
+      <div class="radius">
+        <p>
+          ここになんか書く<br>
+          ゆきひろさんに聞く<br>
+        </p>
       </div>
     <footer>
     <div class="footer-container">
@@ -136,7 +140,7 @@
     const swiper = new Swiper('.swiper', {
       loop: true,
       effect: 'fade',
-      speed: 1000,
+      speed: 2000,
       autoplay: { delay: 3000 },
       pagination: { el: '.swiper-pagination', clickable: true },
     });

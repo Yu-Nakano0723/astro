@@ -5,18 +5,19 @@
 <title>東京理科大学,坊ちゃんサークル</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="/src/layouts/Yu_activity.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<style>
-.swiper {
-  width: 600px;
-  height: 300px;
-}
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-</style>
+
+<script>
+  // @ts-nocheck
+
+  document.querySelectorAll('.swiper').forEach(el => {
+    new Swiper(el, {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+    });
+  });
+</script>
 
 
 

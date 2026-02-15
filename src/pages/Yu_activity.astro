@@ -12,30 +12,22 @@
     <!--ヘッダー-->
     <header> 
         <div class="logo">坊ちゃんサークル</div>
-        <nav>
-          <a href="/lukiahome" id="migi">HOME</a>
-          <a href="/Yu_activity" id="migi">活動内容</a>
-          <a href="/memeberintroduction" id="migi">メンバー</a>
-          <a href="/lukiaguide" id="migi">組織</a>
-          <a href="#" id="migi">お問い合わせ</a>
-       </nav>
-       <div class="inner">
-        <a href="/" class="logo">LOGO</a>
-        <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button id="menuBtn" class="gear-btn" aria-label="メニュー">
+          <!-- 歯車SVG -->
+           <svg viewBox="0 0 24 24" class="gear">
+            <path fill="currentColor"d="M19.14,12.94A7.43,7.43,0,0,0,19.2,12a7.43,7.43,0,0,0-.06-.94l2.11-1.65a.5.5,0,0,0,.12-.63l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a7.28,7.28,0,0,0-1.63-.94l-.38-2.65A.5.5,0,0,0,13.77,2H10.23a.5.5,0,0,0-.49.42L9.36,5.07a7.28,7.28,0,0,0-1.63.94l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.5.5,0,0,0,.12.63L4.86,11.06A7.43,7.43,0,0,0,4.8,12a7.43,7.43,0,0,0,.06.94L2.75,14.59a.5.5,0,0,0-.12.63l2,3.46a.5.5,0,0,0,.6.22l2.49-1a7.28,7.28,0,0,0,1.63.94l.38,2.65a.5.5,0,0,0,.49.42h3.54a.5.5,0,0,0,.49-.42l.38-2.65a7.28,7.28,0,0,0,1.63-.94l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.5.5,0,0,0-.12-.63ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+          </svg>
         </button>
-
-        <nav class="nav" id="nav">
+        <nav id="menu" class="menu">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/lukiahome" id="migi">HOME</a></li>
+            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
+            <li><a href="/memeberintroduction" id="migi">メンバー</a></li>
+            <li><a href="#" id="migi">お問い合わせ</a></li>
           </ul>
         </nav>
-      </div>
-    </header>
+        <div id="overlay" class="overlay"></div>
+      </header>
 
     <h1>活動内容</h1>
       <ul>
@@ -63,12 +55,18 @@
 
         <div class="swiper-pagination"></div>
       </div>
-      <div class="radius">
-        <p>
-          ここになんか書く<br>
-          ex)行事,実験<br>
-        </p>
-      </div>
+      <div class="radius-wrapper">
+  <button id="toggleBtn" class="arrow-btn">▼</button>
+
+  <div id="radiusBox" class="radius">
+    <div class="radius-inner">
+      <p>
+        ここになんか書く<br>
+        ex)行事,実験<br>
+      </p>
+    </div>
+  </div>
+</div>
       <ul>
         <li>2025年度</li>
       </ul>
@@ -94,14 +92,20 @@
 
         <div class="swiper-pagination"></div>
       </div>
-      <div class="radius">
-        <p>
-          4月:新入生歓迎会<br>
-          5月:実験<br>
-          8~9月:来年度のigemテール決め<br>
-          2月:合宿<br>
-        </p>
-        </div>
+<div class="radius-wrapper">
+  <button id="toggleBtn" class="arrow-btn">▼</button>
+
+  <div id="radiusBox" class="radius">
+    <div class="radius-inner">
+      <p>
+        4月:新入生歓迎会<br>
+        5月:実験<br>
+        8~9月:来年度のigemテール決め<br>
+        2月:合宿<br>
+      </p>
+    </div>
+  </div>
+</div>
       <ul>
         <li>2024年度</li>
       </ul>
@@ -127,94 +131,100 @@
 
         <div class="swiper-pagination"></div>
       </div>
-      <div class="radius">
-        <p>
-          1,2,3月
-【部活関連】
-新入生歓迎会の内容の検討
-みらい研究室への参加
-【iGEM関連】
-iGEMの参加決め
-チームの役割分担
-テーマ案決め
-iGEM Japan Meetup への参加
+      <div class="radius-wrapper">
+  <button class="arrow-btn">▼</button>
 
-4月
-【部活関連】
-新入生歓迎会
-【iGEM関連】
-テーマ案の決定
-1年生のチーム割り振り
-プラスミド設計
-東京薬科大学のモデルチームとの交流会
+  <div class="radius">
+    <div class="radius-inner">
+      <p>
+        1,2,3月<br>
+          【部活関連】<br>
+新入生歓迎会の内容の検討<br>
+みらい研究室への参加<br>
+【iGEM関連】<br>
+iGEMの参加決め<br>
+チームの役割分担<br>
+テーマ案決め<br>
+iGEM Japan Meetup への参加<br>
 
-５月
-【部活関連】
-SCイベント案出し
-【iGEM関連】
-遺伝子組み換え講習会
-ピペット講習
-Human practice 強化週間(専門家に意見を聞く)
-遺伝子組み換え申請の作成
+4月<br>
+【部活関連】<br>
+新入生歓迎会<br>
+【iGEM関連】<br>
+テーマ案の決定<br>
+1年生のチーム割り振り<br>
+プラスミド設計<br>
+東京薬科大学のモデルチームとの交流会<br>
 
-6月
-【部活関連】
-朝日新聞が主催するサイエンスフェスに参加
-野田市子供館での実験実習
-【iGEM関連】
-プロトコル作成、モデルの検討などの研究活動
-Safety form（安全基準や倫理規定を守っているかの書類）をiGEM側に提出
+5月<br>
+【部活関連】<br>
+SCイベント案出し<br>
+【iGEM関連】<br>
+遺伝子組み換え講習会<br>
+ピペット講習<br>
+Human practice 強化週間(専門家に意見を聞く)<br>
+遺伝子組み換え申請の作成<br>
 
-７月
-【部活関連】
-Interfexの見学
-公民館でのイベント実施
-【iGEM関連】
-プロトコル作成、モデルの検討などの研究活動
-遺伝子組換えをふくまない実験の実施
+6月<br>
+【部活関連】<br>
+朝日新聞が主催するサイエンスフェスに参加<br>
+野田市子供館での実験実習<br>
+【iGEM関連】<br>
+プロトコル作成、モデルの検討などの研究活動<br>
+Safety form（安全基準や倫理規定を守っているかの書類）をiGEM側に提出<br>
 
-８月
-【部活関連】
-東京未来館、公民館でのイベント実施
-【iGEM関連】
-遺伝子組換え実験の開始
-各班の研究活動
-iGEM Japan Meetupへの参加（日本チームで進捗を共有する会）
-バイオリスクマネージメントの参加（国立感染症研究所がiGEMerのために開催してくれる安全講習）
-サイエンスコネクトへの参加（日本チームで共同主催したイベント）
-プロモーションビデオの作成（3分ぐらいの簡単にプロジェクトを紹介するビデオ）
+7月<br>
+【部活関連】<br>
+Interfexの見学<br>
+公民館でのイベント実施<br>
+【iGEM関連】<br>
+プロトコル作成、モデルの検討などの研究活動<br>
+遺伝子組換えをふくまない実験の実施<br>
 
-９月
-【部活関連】
-西深井小学校での理科の授業を実施
-【iGEM関連】
-各班の研究活動
-Wiki, presentation videoの作成（実験の成果をまとめたウェブサイトや動画）
+8月<br>
+【部活関連】<br>
+東京未来館、公民館でのイベント実施<br>
+【iGEM関連】<br>
+遺伝子組換え実験の開始<br>
+各班の研究活動<br>
+iGEM Japan Meetupへの参加（日本チームで進捗を共有する会）<br>
+バイオリスクマネージメントの参加（国立感染症研究所がiGEMerのために開催してくれる安全講習）<br>
+サイエンスコネクトへの参加（日本チームで共同主催したイベント）<br>
+プロモーションビデオの作成（3分ぐらいの簡単にプロジェクトを紹介するビデオ）<br>
 
-10月
+9月<br>
 【部活関連】
-文化祭の用意
-【iGEM関連】
-Wiki freeze(ウェブサイトが編集できなくなる)
-質疑応答、発表練習
-iGEM grand jamboreeに参加するためフランスへ渡航（1週間程度）
+西深井小学校での理科の授業を実施<br>
+【iGEM関連】<br>
+各班の研究活動<br>
+Wiki, presentation videoの作成（実験の成果をまとめたウェブサイトや動画）<br>
 
-11月
-【部活関連】
-文化祭
-【iGEM関連】
-成果発表
-夢工房での結果報告
-引継ぎ
+10月<br>
+【部活関連】<br>
+文化祭の用意<br>
+【iGEM関連】<br>
+Wiki freeze(ウェブサイトが編集できなくなる)<br>
+質疑応答、発表練習<br>
+iGEM grand jamboreeに参加するためフランスへ渡航（1週間程度）<br>
 
-12月
-【部活関連】
-冬勧誘の用意と実験
-【iGEM関連】
-テーマ案決め
->
-        </p>
-      </div>
+11月<br>
+【部活関連】<br>
+文化祭<br>
+【iGEM関連】<br>
+成果発表<br>
+夢工房での結果報告<br>
+引継ぎ<br>
+
+12月<br>
+【部活関連】<br>
+冬勧誘の用意と実験<br>
+【iGEM関連】<br>
+テーマ案決め<br>
+      </p>
+    </div>
+  </div>
+</div>
+
     <footer>
     <div class="footer-container">
       <p>&copy; 2025 TUSbotchanlab.website.</p>
@@ -229,10 +239,51 @@ iGEM grand jamboreeに参加するためフランスへ渡航（1週間程度）
       </nav>
     </div>
   </footer>
-  <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- 以下説明欄のjs -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const wrappers = document.querySelectorAll(".radius-wrapper");
 
-<!-- JS -->
+    wrappers.forEach((wrapper) => {
+      const btn = wrapper.querySelector(".arrow-btn");
+      const box = wrapper.querySelector(".radius");
+
+      btn.addEventListener("click", () => {
+        const isOpen = box.classList.contains("open");
+
+        if (isOpen) {
+          box.style.height = box.scrollHeight + "px";
+          requestAnimationFrame(() => {
+            box.style.height = "0px";
+          });
+          box.classList.remove("open");
+        } else {
+          box.style.height = box.scrollHeight + "px";
+          box.classList.add("open");
+        }
+
+        btn.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+  <!-- 以下ハンバーガーのjs -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  });
+</script>
+  <!-- 以下絵のスライドのjs -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script defer>
   window.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper('.swiper', {

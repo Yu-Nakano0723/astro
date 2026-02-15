@@ -1,19 +1,45 @@
 @charset "utf-8";
 
-.radius {
-  border-radius: 20px;
-  background-color: #242150;
-  color: #ffffff;
-  margin: 200px;
-  font-size: large;
-  text-align: center;
-  display: flex;
-  justify-content: center; /* ブロックを中央へ */
-}
-.radius p {
-  text-align: left;        /* 文字は左揃え */
-}
+  .radius-wrapper {
+    margin: 200px;
+    position: relative;
+  }
 
+  .arrow-btn {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #242150;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow-btn.active {
+    transform: rotate(180deg);
+  }
+
+  .radius {
+    border-radius: 20px;
+    background-color: #242150;
+    color: #ffffff;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
+  }
+
+  .radius-inner {
+    padding: 20px;
+  }
+
+  .radius p {
+    margin: 0;
+    text-align: left;
+  }
 
 .swiper {
   width: 100%;
@@ -159,4 +185,89 @@ footer nav ul li a {
 footer nav ul li a:hover {
   color: #ff9800; /* ホバー時に色が変わる */
 }
+  /* 歯車ボタン */
+  .gear-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .gear {
+    width: 48px;
+    height: 48px;
+    color: #dfc0c0;
+    transition: transform 0.6s ease;
+  }
+
+  /* 開いたら回転 */
+  .gear-btn.active .gear {
+    transform: rotate(180deg);
+  }
+
+  /* ボタン */
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .menu-btn img {
+    width: 40px;
+  }
+
+  /* メニュー本体 */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: #477050;
+    color: white;
+    padding: 60px 40px;
+    font-size: 200px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 1000;
+  }
+
+  .menu.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+  }
+
+  /* 背景オーバーレイ */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 999;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
 

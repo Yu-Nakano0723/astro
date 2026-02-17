@@ -1,7 +1,10 @@
 @charset "utf-8";
 
   .radius-wrapper {
-    margin: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
     position: relative;
   }
 
@@ -37,6 +40,7 @@
   }
 
   .radius p {
+    justify-content: center;
     margin: 0;
     text-align: left;
   }

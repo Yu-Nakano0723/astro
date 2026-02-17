@@ -8,10 +8,103 @@
 
   <link rel="stylesheet" href="memberintroduction_style.css">
 </head>
-<body>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-  <header>
-    <div class="logo">TUSbotchanlab</div>
+<meta charset="UTF-8">
+
+<!-- ヘッダー -->
+<header>      
+  <div class="logo">坊ちゃんサークル</div>
+  <nav>
+    <a href="/lukiahome" class="migi">HOME</a>
+    <a href="/Yu活動内容" class="migi">活動内容</a>
+    <a href="/aaa" class="migi">メンバー</a>
+    <a href="/lukiaGovernance" class="migi">組織</a>
+    <a href="" class="migi">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- 見出し -->
+<div id="subheading">
+  <h1>メンバー紹介</h1>
+</div>
+
+<!-- メンバー一覧 -->
+<div class="members-grid">
+
+  <div class="member-card">
+    <img src="/IMG_1497.JPG" alt="メンバー1" class="member-photo">
+    <h2>メンバー1</h2>
+    <p>紹介をかく</p>
+  </div>
+
+  <div class="member-card">
+    <img src="takayama_picture.jpg" alt="メンバー1" class="member-photo">
+    <h2>高山翔那</h2>
+    <p>学年：3年</p>
+    <p>学科：生命創薬科学科</p>
+  </div>
+
+  <div class="member-card">
+    <img src="/IMG_1533.JPG" alt="メンバー2" class="member-photo">
+    <h2>金唯真(副部長)</h2>
+    <p>学年：2年</p>
+    <p>学科：命生物科学科</p>
+    <p>趣味：絵画</p>
+    <p>出身：中国</p>
+  </div>
+
+  <div class="member-card">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/1769495277149.jpg" alt="画像1">
+        </div>
+        <div class="swiper-slide">
+          <img src="/1769495275210.jpg" alt="画像2">
+        </div>
+        <div class="swiper-slide">
+          <img src="/1769495273068.jpg" alt="画像3">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <h2>南雲ルキア</h2>
+    <p>学年：2年</p>
+    <p>学科：生命システム工学科</p>
+    <p>趣味:推し活(ディズニー、西洋絵画)、アニメ、マンガ</p>
+    <p>出身：千葉県柏市</p>
+  </div>
+
+  <div class="member-card">
+    <img src="nakayu_picture.jpg" alt="メンバー4" class="member-photo">
+    <h2>Y.N.</h2>
+    <p>学年：2年</p>
+    <p>学科：物理工学科</p>
+    <p>趣味:トロコイド</p>
+    <p>出身：日本</p>
+  </div>
+
+   <div class="member-card">
+    <img src="/IMG_1398.JPG" alt="メンバー5" class="member-photo">
+    <h2>メンバー5</h2>
+    <p>紹介を書く</p>
+  </div>
+
+   <div class="member-card">
+    <img src="/IMG_1389.JPG" alt="メンバー6" class="member-photo">
+    <h2>メンバー6</h2>
+    <p>紹介を書く</p>
+  </div>
+
+</div>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 TUSbotchanlab.website.</p>
     <nav>
       <ul>
         <li><a href="#">活動内容</a></li>
@@ -19,28 +112,195 @@
         <li><a href="#">メンバー紹介</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</footer>
 
-<div id="subheading">
-<h1>member introduction</h1>
+<!-- トップに戻るボタン -->
+<a href="#" class="to-top" id="toTop">▲</a>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 TUSbotchanlab.website.</p>
-      <nav>
-        <ul>
-          <li><a href="#">活動内容</a></li>
-          <li><a href="#">問い合わせ</a></li>
-          <li><a href="#">メンバー紹介</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+<!-- JS -->
+<script defer>
+  window.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      effect: 'fade',
+      speed: 1000,
+      autoplay: { delay: 3000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  });
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  const toTop = document.getElementById("toTop");
 
-  <script src="script.js"></script>
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTop.classList.add("show");
+    } else {
+      toTop.classList.remove("show");
+    }
+  });
+</script>
 
-</body>
+<style>
+/* ここから CSS */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f5f5f5;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  background-color: #64072A;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.migi {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* 見出し */
+#subheading h1 {
+  margin-left: 20px;
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  padding-left: 15px;
+  border-left: 5px solid #c9a86a;
+}
+
+/* Swiper */
+.swiper {
+  width: 400px;
+  height: 250px;
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* メンバーカード */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.member-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.member-photo {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+/* フッター */
+footer {
+  background-color: #24140e;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+footer nav ul li {
+  margin-left: 20px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* トップへ戻る */
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #64072A;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  background: #8a0a3c;
+}
+</style>
 </html>

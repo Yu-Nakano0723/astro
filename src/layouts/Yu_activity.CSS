@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 .month {
   margin-bottom: 60px;
 }
@@ -61,8 +62,8 @@
 
   .radius {
     border-radius: 20px;
-    background-color: #242150;
-    color: #0b1b2d;
+    background-color: #1a9137;
+    color: #1c1e23;
     overflow: hidden;
     height: 0;
     transition: height 0.4s ease;
@@ -79,14 +80,21 @@
   }
 
 .swiper {
-  width: 100%;
-  height: auto; 
+  width: 970px;
+  height: 600px;
+  justify-content: center;
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: auto;
+  width: 970px;
+  height: 600px;
   object-fit: cover;
+}
+.swiper-slide {
+  width: 970px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
 }
 header
     {position:fixed;        /*画面上部に固定*/

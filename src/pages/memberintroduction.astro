@@ -6,8 +6,11 @@
 <meta charset="UTF-8">
 
 <!-- ヘッダー -->
-<header>      
-  <div class="logo">坊ちゃんサークル</div>
+</head>
+<body>
+    <!--ヘッダー-->
+    <header> 
+        <div class="logo">坊ちゃんサークル</div>
         <button id="menuBtn" class="gear-btn" aria-label="メニュー">
           <!-- 歯車SVG -->
            <svg viewBox="0 0 24 24" class="gear">
@@ -16,14 +19,15 @@
         </button>
         <nav id="menu" class="menu">
           <ul>
-            <li><a href="/lukiahome" id="migi">HOME</a></li>
+            <li><a href="/index" id="migi">HOME</a></li>
             <li><a href="/Yu_activity" id="migi">活動内容</a></li>
             <li><a href="/memberintroduction" id="migi">メンバー</a></li>
             <li><a href="/lukiaguide" id="migi">案内</a></li>
-            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
+            <li><a href="" id="migi">お問い合わせ</a></li>
           </ul>
-  </nav>
-</header>
+        </nav>
+        <div id="overlay" class="overlay"></div>
+      </header>
 
 <!-- 見出し -->
 <div id="subheading">
@@ -326,7 +330,7 @@ footer nav ul li a:hover {
   background: #8a0a3c;
 }
 
- /* 歯車ボタン */
+  /* 歯車ボタン */
   .gear-btn {
     position: fixed;
     top: 20px;

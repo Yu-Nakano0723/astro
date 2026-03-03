@@ -124,9 +124,13 @@ header
      nav {
       display: flex;
       margin-left: auto;}
+      #hidari{
+        color:#ffffff;
+        text-decoration:none;
+        margin-right: 15px;}
 
       #migi{
-        color:#0c2a6c;
+        color:#000000;
         text-decoration:none;
         margin-right: 15px;}
 

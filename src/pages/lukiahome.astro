@@ -23,7 +23,7 @@
             <li><a href="/Yu_activity" id="migi">活動内容</a></li>
             <li><a href="/memberintroduction" id="migi">メンバー</a></li>
             <li><a href="/lukiaguide" id="migi">案内</a></li>
-            <li><a href="" id="migi">お問い合わせ</a></li>
+            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
           </ul>
         </nav>
         <div id="overlay" class="overlay"></div>
@@ -85,11 +85,11 @@
       <p>&copy; 2025 TUSbotchanlab.website.</p>
       <nav>
         <ul>
-           <li><a href="/lukiahome">ホーム</a></li>
-          <li><a href="/Yu_activity">活動内容</a></li>
-          <li><a href="/memberintroduction">メンバー</a></li>
-          <li><a href="/lukiaGovernance">組織</a></li>
-           <li><a href="/inquiry">お問い合わせ</a></li>
+            <li><a href="/lukiahome" id="migi">HOME</a></li>
+            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
+            <li><a href="/memberintroduction" id="migi">メンバー</a></li>
+            <li><a href="/lukiaguide" id="migi">案内</a></li>
+            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
@@ -108,30 +108,6 @@
       btn.classList.toggle("active");
       menu.classList.toggle("open");
     });
-  });
-</script>
-  <!-- 以下絵のスライドのjs -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-<script defer>
-  
-  window.addEventListener("DOMContentLoaded", () => {
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      effect: 'fade',
-      speed: 2000,
-      autoplay: { delay: 3000 },
-      pagination: { el: '.swiper-pagination', clickable: true },
-    });
-  });
-
-  const toTop = document.getElementById("toTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      toTop.classList.add("show");
-    } else {
-      toTop.classList.remove("show");
-    }
   });
 </script>
 </body>

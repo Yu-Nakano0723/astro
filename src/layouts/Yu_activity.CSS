@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-
+.active{
+  background-color: #7aaa7a;
+}
 .month {
   margin-bottom: 60px;
 }
@@ -279,7 +281,7 @@ footer nav ul li a:hover {
     height: 80vh;
     background-image: url("/kim_rogo.png"); /* ここを写真パスに変更 */
     background-size: contain;        /* 全体にフィット */
-    background-position: center;   /* 中央表示 */
+    background-position: center 20%;   /* 中央表示 */
     background-repeat: no-repeat;
     background-color: #ffffff;
     min-height: 100vh;

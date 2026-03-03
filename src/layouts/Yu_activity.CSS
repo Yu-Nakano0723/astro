@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+.active{
+  background-color: #7aaa7a;
+}
 .month {
   margin-bottom: 60px;
 }
@@ -12,7 +15,7 @@
 
 .category {
   flex: 1;
-  background: #f5f5f5;
+  background: #7aaa7a;
   padding: 20px;
   border-radius: 12px;
 }
@@ -23,7 +26,7 @@
 
 .category ul {
   padding-left: 20px;
-  color: #477050;
+  color: #0a2348;
 }
 
 /* スマホ対応 */
@@ -61,11 +64,13 @@
 
   .radius {
     border-radius: 20px;
-    background-color: #242150;
-    color: #0b1b2d;
+    background-color: #71ec90;
+    color: #161f35;
     overflow: hidden;
     height: 0;
     transition: height 0.4s ease;
+    max-height: 500px;   /* 好きな高さに調整可 */
+    overflow-y: auto;    /* 縦スクロール有効 */
   }
 
   .radius-inner {
@@ -79,14 +84,21 @@
   }
 
 .swiper {
-  width: 100%;
-  height: auto; 
+  width: 970px;
+  height: 600px;
+  justify-content: center;
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: auto;
+  width: 970px;
+  height: 600px;
   object-fit: cover;
+}
+.swiper-slide {
+  width: 970px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
 }
 header
     {position:fixed;        /*画面上部に固定*/
@@ -114,7 +126,7 @@ header
       margin-left: auto;}
 
       #migi{
-        color:#ffffff;
+        color:#0c2a6c;
         text-decoration:none;
         margin-right: 15px;}
 
@@ -266,9 +278,14 @@ footer nav ul li a:hover {
     top: 0;
     right: 0;
     width: 70%;
-    height: 100vh;
-    background: #477050;
-    color: white;
+    height: 80vh;
+    background-image: url("/kim_rogo.png"); /* ここを写真パスに変更 */
+    background-size: contain;        /* 全体にフィット */
+    background-position: center 20%;   /* 中央表示 */
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    min-height: 100vh;
+    color: rgb(5, 33, 12);
     padding: 60px 40px;
     font-size: 200px;
     transform: translateX(100%);
@@ -276,6 +293,20 @@ footer nav ul li a:hover {
     transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: 1000;
   }
+  /* 左側を白くフェード */
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.7) 25%,
+    rgba(255,255,255,0.3) 45%,
+    rgba(255,255,255,0) 65%
+  );
+  pointer-events: none;
+}
 
   .menu.open {
     transform: translateX(0);
@@ -285,6 +316,8 @@ footer nav ul li a:hover {
   .menu ul {
     list-style: none;
     padding: 0;
+    position: relative;
+    z-index: 1;
   }
 
   .menu li {

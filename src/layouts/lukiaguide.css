@@ -29,7 +29,7 @@
     }
 
       #migi{
-        color:#ffffff;
+        color:#000000;
         text-decoration:none;
         margin-right: 15px;
       }
@@ -91,11 +91,110 @@ footer nav ul li a:hover {
 }
 /*以上フッダー*/
 
-     
-    
+/* 歯車ボタン */
+  .gear-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-      
+  .gear {
+    width: 48px;
+    height: 48px;
+    color: #dfc0c0;
+    transition: transform 0.6s ease;
+  }
     
+   /* 開いたら回転 */
+  .gear-btn.active .gear {
+    transform: rotate(180deg);
+  }
 
-      
-     
+  /* ボタン */
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .menu-btn img {
+    width: 40px;
+  }
+
+  /* メニュー本体 */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 80vh;
+    background-image: url("/kim_rogo.png"); /* ここを写真パスに変更 */
+    background-size: contain;        /* 全体にフィット */
+    background-position: center 20%;   /* 中央表示 */
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    min-height: 100vh;
+    color: rgb(5, 33, 12);
+    padding: 60px 40px;
+    font-size: 200px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 1000;
+  }
+  /* 左側を白くフェード */
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.7) 25%,
+    rgba(255,255,255,0.3) 45%,
+    rgba(255,255,255,0) 65%
+  );
+  pointer-events: none;
+}
+
+  .menu.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu li {
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+  }
+
+  /* 背景オーバーレイ */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 999;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+

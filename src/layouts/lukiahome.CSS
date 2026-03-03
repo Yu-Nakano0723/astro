@@ -30,6 +30,10 @@
         color:#000000;
         text-decoration:none;
         margin-right: 15px;}
+        #hidari{
+        color:#000000;
+        text-decoration:none;
+        margin-right: 15px;}
 
       @media (max-width: 700px) /*条件指定できる*/
       {

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-.active{
-  background-color: #7aaa7a;
+.caption{
+  color: #051a24;
 }
 .month {
   margin-bottom: 60px;
@@ -85,7 +85,7 @@
 
 .swiper {
   width: 970px;
-  height: 600px;
+  height: 540px;
   justify-content: center;
 }
 
@@ -95,7 +95,7 @@
   object-fit: cover;
 }
 .swiper-slide {
-  width: 970px;
+  width: 900px;
   height: 600px;
   display: flex;
   justify-content: center;

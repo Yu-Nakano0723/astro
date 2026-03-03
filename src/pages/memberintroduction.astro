@@ -5,12 +5,9 @@
 
 <meta charset="UTF-8">
 
-<!-- ヘッダー -->
-</head>
-<body>
-    <!--ヘッダー-->
-    <header> 
-        <div class="logo">坊ちゃんサークル</div>
+<!--ヘッダー-->
+  <header> 
+       <div class="logo">坊ちゃんサークル</div>
         <button id="menuBtn" class="gear-btn" aria-label="メニュー">
           <!-- 歯車SVG -->
            <svg viewBox="0 0 24 24" class="gear">
@@ -26,8 +23,8 @@
             <li><a href="" id="migi">お問い合わせ</a></li>
           </ul>
         </nav>
-        <div id="overlay" class="overlay"></div>
-      </header>
+      <div id="overlay" class="overlay"></div>
+  </header>
 
 <!-- 見出し -->
 <div id="subheading">
@@ -181,38 +178,65 @@ body {
 }
 
 /* ヘッダー */
-header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 80px;
-  background-color: #64072A;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  box-sizing: border-box;
-  z-index: 1000;
-  flex-wrap: wrap;
-}
+header
+    {position:fixed;        /*画面上部に固定*/
+     top:0px;
+     left:0px;
+     width:100%;            /*帯の長さ*/
+     height:80px;           /*ヘッダーの文字下の空間*/
+     background-color:#64072A; /*帯の色*/
+     color:white;         /*タイトルの文字の色*/ 
+     display: flex;                  /* 横並びにする */
+     align-items: center;    /* 垂直中央 */
+     padding:   0 30px;        /* 上下　左右の余白 */
+     box-sizing: border-box; /* widthとpaddingが重なると見切れるからこれで枠内に収める */
+     z-index: 1000;          /* 最前面 */
+     flex-wrap: wrap; /* ← ここで複数行許可 */}
 
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  white-space: nowrap;
-}
+     .logo /*左側の文字に関する指示*/
+      { font-size: 30px;   /* 大きさ調整 */
+      font-weight: bold; /* 太字に */
+      letter-spacing: 2px; /* 文字の間隔を少し広げる */
+      white-space: nowrap; /* ロゴの改行防止 */}
 
-nav {
-  display: flex;
-  margin-left: auto;
-}
+     nav {
+      display: flex;
+      margin-left: auto;}
+      #hidari{
+        color:#ffffff;
+        text-decoration:none;
+        margin-right: 15px;}
 
-.migi {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 15px;
-}
+      #migi{
+        color:#000000;
+        text-decoration:none;
+        margin-right: 15px;}
+
+      @media (max-width: 700px) /*条件指定できる*/
+      {
+      header 
+      {justify-content: center; /* 中央寄せ */
+        height: auto;           /* 高さ自動 */
+        }
+
+      nav 
+      {width: 100%; /* 2行目に全幅で配置 */
+       justify-content: center;
+       margin-top: 8px;
+      }}
+
+      body{padding-top:40px}
+
+      /*eyecatch*/
+      .eyecatch{
+        width: 100%;
+        height: 600px;
+        background-image:url(team.jpg);
+        background-size: cover;       /* ← 画面に合わせて拡大縮小（縦横比を維持） */
+        background-position: center;  /* ← 画像の中央を基準に表示 */
+        background-repeat: no-repeat; /* ← 画像の繰り返しを防ぐ */
+      }
+
 
 /* 見出し */
 #subheading h1 {

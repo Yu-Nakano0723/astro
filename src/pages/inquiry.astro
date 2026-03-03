@@ -53,9 +53,7 @@
 </aside>
 
 <p>LINEでのお問い合わせはこちらから</p>
-<a href="https://page.line.biz/account-page/1877590550785157/profile">
-  LINE公式アカウントを開く
-</a>
+<a href="https://lin.ee/H21QtuM"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
 
    <footer>
     <div class="footer-container">
@@ -140,6 +138,10 @@ body {
   border-left: 5px solid #c9a86a;
 }
 
+#subheading p {
+ margin-left: 20px;
+ }
+ 
 /* Googleフォーム*/
 .responsive-iframe {
   width: 100%;
@@ -170,18 +172,13 @@ body {
 }
 
 /*LINEリンク*/
-a.line-link {
-  display: inline-block;
-  margin-left: 20px;
-  margin-bottom: 40px;
-  font-size: 18px;
-  color: #0066cc;
-  text-decoration: none;
+.center-left {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;        /* まず中央に配置 */
+  transform: translateX(-20%); /* ここで少し左へ移動（調整可） */
 }
 
-a.line-link:hover {
-  text-decoration: underline;
-}
 
 
 /* 以下フッダー */

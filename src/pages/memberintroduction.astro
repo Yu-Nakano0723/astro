@@ -6,6 +6,27 @@
 <meta charset="UTF-8">
 
 <!-- ヘッダー -->
+<<<<<<< HEAD
+  <header> 
+        <div class="logo">坊ちゃんサークル</div>
+        <button id="menuBtn" class="gear-btn" aria-label="メニュー">
+          <!-- 歯車SVG -->
+           <svg viewBox="0 0 24 24" class="gear">
+            <path fill="currentColor"d="M19.14,12.94A7.43,7.43,0,0,0,19.2,12a7.43,7.43,0,0,0-.06-.94l2.11-1.65a.5.5,0,0,0,.12-.63l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a7.28,7.28,0,0,0-1.63-.94l-.38-2.65A.5.5,0,0,0,13.77,2H10.23a.5.5,0,0,0-.49.42L9.36,5.07a7.28,7.28,0,0,0-1.63.94l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.5.5,0,0,0,.12.63L4.86,11.06A7.43,7.43,0,0,0,4.8,12a7.43,7.43,0,0,0,.06.94L2.75,14.59a.5.5,0,0,0-.12.63l2,3.46a.5.5,0,0,0,.6.22l2.49-1a7.28,7.28,0,0,0,1.63.94l.38,2.65a.5.5,0,0,0,.49.42h3.54a.5.5,0,0,0,.49-.42l.38-2.65a7.28,7.28,0,0,0,1.63-.94l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.5.5,0,0,0-.12-.63ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+          </svg>
+        </button>
+        <nav id="menu" class="menu">
+          <ul>
+            <li><a href="/lukiahome" id="migi">HOME</a></li>
+            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
+            <li><a href="/memberintroduction" id="migi">メンバー</a></li>
+            <li><a href="/lukiaguide" id="migi">案内</a></li>
+            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div id="overlay" class="overlay"></div>
+      </header>
+=======
 <header>      
   <div class="logo">坊ちゃんサークル</div>
   <nav>
@@ -16,6 +37,7 @@
         <a href="/inquiry" id="migi">お問い合わせ</a>
   </nav>
 </header>
+>>>>>>> f31678c791a1f7b177b8f080c14cbc92dba8a6dd
 
 <!-- 見出し -->
 <div id="subheading">
@@ -55,13 +77,13 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="/1769495277149.jpg" alt="画像1">
+          <img src="るきあさん１.jpg" alt="画像1">
         </div>
         <div class="swiper-slide">
-          <img src="/1769495275210.jpg" alt="画像2">
+          <img src="るきあさん２.jpg" alt="画像2">
         </div>
         <div class="swiper-slide">
-          <img src="/1769495273068.jpg" alt="画像3">
+          <img src="るきあさん３.jpg" alt="画像3">
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -144,6 +166,20 @@
   });
 </script>
 
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  });
+</script>
+
 <style>
 /* ここから CSS */
 
@@ -154,38 +190,66 @@ body {
 }
 
 /* ヘッダー */
-header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 80px;
-  background-color: #64072A;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  box-sizing: border-box;
-  z-index: 1000;
-  flex-wrap: wrap;
-}
+header
+    {position:fixed;        /*画面上部に固定*/
+     top:0px;
+     left:0px;
+     width:100%;            /*帯の長さ*/
+     height:80px;           /*ヘッダーの文字下の空間*/
+     background-color:#64072A; /*帯の色*/
+     color:white;         /*タイトルの文字の色*/ 
+     display: flex;                  /* 横並びにする */
+     align-items: center;    /* 垂直中央 */
+     padding:   0 30px;        /* 上下　左右の余白 */
+     box-sizing: border-box; /* widthとpaddingが重なると見切れるからこれで枠内に収める */
+     z-index: 1000;          /* 最前面 */
+     flex-wrap: wrap; /* ← ここで複数行許可 */}
 
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  white-space: nowrap;
-}
+     .logo /*左側の文字に関する指示*/
+      { font-size: 30px;   /* 大きさ調整 */
+      font-weight: bold; /* 太字に */
+      letter-spacing: 2px; /* 文字の間隔を少し広げる */
+      white-space: nowrap; /* ロゴの改行防止 */}
 
-nav {
-  display: flex;
-  margin-left: auto;
-}
+     nav {
+      display: flex;
+      margin-left: auto;}
 
-.migi {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 15px;
-}
+      #migi{
+        color:#000000;
+        text-decoration:none;
+        margin-right: 15px;}
+
+      @media (max-width: 700px) /*条件指定できる*/
+      {
+      header 
+      {justify-content: center; /* 中央寄せ */
+        height: auto;           /* 高さ自動 */
+        }
+
+      nav 
+      {width: 100%; /* 2行目に全幅で配置 */
+       justify-content: center;
+       margin-top: 8px;
+      }}  
+
+  /* 背景オーバーレイ */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 999;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
 
 /* 見出し */
 #subheading h1 {
@@ -302,4 +366,113 @@ footer nav ul li a:hover {
 .to-top:hover {
   background: #8a0a3c;
 }
+
+ /* 歯車ボタン */
+  .gear-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .gear {
+    width: 48px;
+    height: 48px;
+    color: #dfc0c0;
+    transition: transform 0.6s ease;
+  }
+
+  /* 開いたら回転 */
+  .gear-btn.active .gear {
+    transform: rotate(180deg);
+  }
+
+  /* ボタン */
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .menu-btn img {
+    width: 40px;
+  }
+
+  /* メニュー本体 */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 80vh;
+    background-image: url("/kim_rogo.png"); /* ここを写真パスに変更 */
+    background-size: contain;        /* 全体にフィット */
+    background-position: center 20%;   /* 中央表示 */
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    min-height: 100vh;
+    color: rgb(5, 33, 12);
+    padding: 60px 40px;
+    font-size: 200px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 1000;
+  }
+  /* 左側を白くフェード */
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.7) 25%,
+    rgba(255,255,255,0.3) 45%,
+    rgba(255,255,255,0) 65%
+  );
+  pointer-events: none;
+}
+
+  .menu.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu li {
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+  }
+
+  /* 背景オーバーレイ */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 999;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
 </style>

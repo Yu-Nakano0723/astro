@@ -8,25 +8,16 @@
 </head>
 
 <body>
-      <header> 
-        <div class="logo">坊ちゃんサークル</div>
-        <button id="menuBtn" class="gear-btn" aria-label="メニュー">
-          <!-- 歯車SVG -->
-           <svg viewBox="0 0 24 24" class="gear">
-            <path fill="currentColor"d="M19.14,12.94A7.43,7.43,0,0,0,19.2,12a7.43,7.43,0,0,0-.06-.94l2.11-1.65a.5.5,0,0,0,.12-.63l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a7.28,7.28,0,0,0-1.63-.94l-.38-2.65A.5.5,0,0,0,13.77,2H10.23a.5.5,0,0,0-.49.42L9.36,5.07a7.28,7.28,0,0,0-1.63.94l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.5.5,0,0,0,.12.63L4.86,11.06A7.43,7.43,0,0,0,4.8,12a7.43,7.43,0,0,0,.06.94L2.75,14.59a.5.5,0,0,0-.12.63l2,3.46a.5.5,0,0,0,.6.22l2.49-1a7.28,7.28,0,0,0,1.63.94l.38,2.65a.5.5,0,0,0,.49.42h3.54a.5.5,0,0,0,.49-.42l.38-2.65a7.28,7.28,0,0,0,1.63-.94l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.5.5,0,0,0-.12-.63ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
-          </svg>
-        </button>
-        <nav id="menu" class="menu">
-          <ul>
-            <li><a href="/lukiahome" id="migi">HOME</a></li>
-            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
-            <li><a href="/memberintroduction" id="migi">メンバー</a></li>
-            <li><a href="/lukiaguide" id="migi">案内</a></li>
-            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
-          </ul>
-        </nav>
-        <div id="overlay" class="overlay"></div>
-      </header>
+  <header>      
+    <div class="logo">坊ちゃんサークル</div>
+      <nav>
+        <a href="/lukiahome" id="migi">HOME</a>  
+        <a href="/Yu_activity" id="migi">活動内容</a>
+        <a href="/memberintroduction" id="migi">メンバー</a>
+        <a href="/lukiaguide" id="migi">案内</a>
+        <a href="" id="migi">お問い合わせ</a>
+      </nav>
+  </header>
 
   <div class="eyecatch">
     <div class="start">
@@ -77,18 +68,16 @@ iGEMでは生物だけでなく、物理・化学・数学など幅広い分野�
       <p>&copy; 2025 TUSbotchanlab.website.</p>
       <nav>
         <ul>
-            <li><a href="/lukiahome" id="migi">HOME</a></li>
-            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
-            <li><a href="/memberintroduction" id="migi">メンバー</a></li>
-            <li><a href="/lukiaguide" id="migi">案内</a></li>
-            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
+           <li><a href="/lukiahome">ホーム</a></li>
+          <li><a href="/Yu_activity">活動内容</a></li>
+          <li><a href="/memberintroduction">メンバー</a></li>
+          <li><a href="/lukiaGovernance">組織</a></li>
+           <li><a href="">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </footer>
-    
-  
-  <!-- 以下ハンバーガーのjs -->
+    <!-- 以下ハンバーガーのjs -->
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("menuBtn");

@@ -186,6 +186,35 @@
     </div>
   </footer>
 
+<!-- トップに戻るボタン -->
+<a href="#" class="to-top" id="toTop">▲</a>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<!-- JS -->
+<script defer>
+  window.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      effect: 'fade',
+      speed: 1000,
+      autoplay: { delay: 3000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  });
+
+  const toTop = document.getElementById("toTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTop.classList.add("show");
+    } else {
+      toTop.classList.remove("show");
+    }
+  });
+</script>
+
       <!-- 以下ハンバーガーのjs -->
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {

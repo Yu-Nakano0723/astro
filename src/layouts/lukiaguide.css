@@ -48,7 +48,7 @@
        margin-top: 8px;
       }}
 
-      body{padding-top:50px;
+      body{padding-top:0px;
             margin:0}
       /*以上ヘッダー*/
 
@@ -90,6 +90,32 @@ footer nav ul li a:hover {
   color: #ff9800; /* ホバー時に色が変わる */
 }
 /*以上フッダー*/
+
+/* トップへ戻る */
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #64072A;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  background: #8a0a3c;
+}
 
 /* 歯車ボタン */
   .gear-btn {

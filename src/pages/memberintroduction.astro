@@ -5,9 +5,9 @@
 
 <meta charset="UTF-8">
 
-<!--ヘッダー-->
-  <header> 
-       <div class="logo">坊ちゃんサークル</div>
+  <!--ヘッダー-->
+    <header> 
+        <div class="logo">坊ちゃんサークル</div>
         <button id="menuBtn" class="gear-btn" aria-label="メニュー">
           <!-- 歯車SVG -->
            <svg viewBox="0 0 24 24" class="gear">
@@ -23,8 +23,8 @@
             <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
           </ul>
         </nav>
-      <div id="overlay" class="overlay"></div>
-  </header>
+        <div id="overlay" class="overlay"></div>
+      </header>
 
 <!-- 見出し -->
 <div id="subheading">
@@ -80,7 +80,7 @@
     <p>学年：2年</p>
     <p>学科：生命システム工学科</p>
     <p>趣味:推し活(ディズニー、西洋絵画)、アニメ、マンガ</p>
-    <p>出身：千葉県柏市</p>
+    <p>出身：千葉県</p>
   </div>
 
   <div class="member-card">
@@ -114,11 +114,11 @@
     <p>&copy; 2026 TUSbotchanlab.website.</p>
     <nav>
       <ul>
-            <li><a href="/lukiahome" id="migi">HOME</a></li>
-            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
-            <li><a href="/memberintroduction" id="migi">メンバー</a></li>
-            <li><a href="/lukiaguide" id="migi">案内</a></li>
-            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
+          <li><a href="/lukiahome" id="hidari">ホーム</a></li>
+          <li><a href="/Yu_activity "id="hidari">活動内容</a></li>
+          <li><a href="/memberintroduction" id="hidari">メンバー</a></li>
+          <li><a href="/lukiaGovernance" id="hidari">組織</a></li>
+          <li><a href="inquiry" id="hidari">お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
@@ -222,6 +222,11 @@ header
         text-decoration:none;
         margin-right: 15px;}
 
+              #hidari{
+        color:#ffffff;
+        text-decoration:none;
+        margin-right: 15px;}
+
       #migi{
         color:#000000;
         text-decoration:none;
@@ -321,7 +326,7 @@ header
 
 /* フッター */
 footer {
-  background-color: #24140e;
+background-color: #64072A;   /* 背景色 */
   color: #fff;
   padding: 20px;
 }
@@ -379,7 +384,7 @@ footer nav ul li a:hover {
   background: #8a0a3c;
 }
 
-  /* 歯車ボタン */
+/* 歯車ボタン */
   .gear-btn {
     position: fixed;
     top: 20px;
@@ -396,8 +401,8 @@ footer nav ul li a:hover {
     color: #dfc0c0;
     transition: transform 0.6s ease;
   }
-
-  /* 開いたら回転 */
+    
+   /* 開いたら回転 */
   .gear-btn.active .gear {
     transform: rotate(180deg);
   }

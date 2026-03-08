@@ -91,14 +91,26 @@
 
 .swiper-slide img {
   width: 970px;
-  height: 600px;
+  height: 500px;
   object-fit: cover;
 }
 .swiper-slide {
   width: 900px;
-  height: 600px;
-  display: flex;
+  height: 540px;
+  display:block;
+  text-align:center;
   justify-content: center;
+}
+.swiper-slide figure{
+  margin: 0;
+}
+
+.swiper-slide figcaption{
+  display:block;
+  margin-bottom:10px;
+  font-size:16px;
+  color:#333;
+  background:white;
 }
 header
     {position:fixed;        /*画面上部に固定*/

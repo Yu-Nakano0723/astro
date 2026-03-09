@@ -126,19 +126,6 @@
     </div>
   </footer>
 
-<!-- 以下ハンバーガーのjs -->
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("menu");
-
-    if (!btn || !menu) return;
-
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("active");
-      menu.classList.toggle("open");
-    });
-  });
 </script>
 
 <!-- トップに戻るボタン -->
@@ -146,6 +133,8 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<script src="script.js"></script>
 
 <!-- JS -->
 <script defer>
@@ -372,7 +361,7 @@ footer nav ul li a:hover {
   background: #8a0a3c;
 }
 
- /* 歯車ボタン */
+/* 歯車ボタン */
   .gear-btn {
     position: fixed;
     top: 20px;
@@ -389,8 +378,8 @@ footer nav ul li a:hover {
     color: #dfc0c0;
     transition: transform 0.6s ease;
   }
-
-  /* 開いたら回転 */
+    
+   /* 開いたら回転 */
   .gear-btn.active .gear {
     transform: rotate(180deg);
   }
@@ -478,4 +467,5 @@ footer nav ul li a:hover {
     opacity: 1;
     pointer-events: auto;
   }
+
 </style>

@@ -1,37 +1,48 @@
 @charset "utf-8";
-/*ヘッダー*/
-     
-    header
-    {position:fixed;            /*画面上部に固定*/
-     top:0px;
-     width:100%;                 /*帯の長さ*/
-     height:80px;                /*ヘッダーの文字下の空間*/
-     background-color:#64072A; /*帯の色*/
-     color:rgb(255, 255, 255); /*タイトルの文字の色*/ 
-     display: flex;              /* 横並びにする */
-     align-items: center;        /* 垂直中央 */
-     padding:   0 30px;          /* 上下　左右の余白 */
-     box-sizing: border-box;     /* widthとpaddingが重なると見切れるからこれで枠内に収める */
-     z-index: 1000;              /* 最前面 */
-     flex-wrap: wrap;            /* 複数行許可 */ 
-    }
 
-     .logo                       /*左側の文字に関する指示*/
-    {font-size: 30px;            /* 大きさ調整 */
-     font-weight: bold;          /* 太字 */
-     letter-spacing: 2px;        /* 文字の間隔を少し広げる */
-     white-space: nowrap;        /* ロゴの改行防止 */}
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f5f5f5;
+}
+
+/* ヘッダー */
+header
+    {position:fixed;        /*画面上部に固定*/
+     top:0px;
+     left:0px;
+     width:100%;            /*帯の長さ*/
+     height:80px;           /*ヘッダーの文字下の空間*/
+     background-color:#64072A; /*帯の色*/
+     color:white;         /*タイトルの文字の色*/ 
+     display: flex;                  /* 横並びにする */
+     align-items: center;    /* 垂直中央 */
+     padding:   0 30px;        /* 上下　左右の余白 */
+     box-sizing: border-box; /* widthとpaddingが重なると見切れるからこれで枠内に収める */
+     z-index: 1000;          /* 最前面 */
+     flex-wrap: wrap; /* ← ここで複数行許可 */}
+
+     .logo /*左側の文字に関する指示*/
+      { font-size: 30px;   /* 大きさ調整 */
+      font-weight: bold; /* 太字に */
+      letter-spacing: 2px; /* 文字の間隔を少し広げる */
+      white-space: nowrap; /* ロゴの改行防止 */}
 
      nav {
       display: flex;
       margin-left: auto;}
+      #hidari{
+        color:#ffffff;
+        text-decoration:none;
+        margin-right: 15px;}
+
+              #hidari{
+        color:#ffffff;
+        text-decoration:none;
+        margin-right: 15px;}
 
       #migi{
         color:#000000;
-        text-decoration:none;
-        margin-right: 15px;}
-      #hidari{
-        color:#ffffff;
         text-decoration:none;
         margin-right: 15px;}
 
@@ -48,33 +59,103 @@
        margin-top: 8px;
       }}
 
-      body{padding-top:0px;
-            margin:0}
-      /*以上ヘッダー*/
+      body{padding-top:40px}
 
-   .main{margin-left:50px;}
-   h2{background-color: rgb(201, 201, 201);}
+      /*eyecatch*/
+      .eyecatch{
+        width: 100%;
+        height: 600px;
+        background-image:url(team.jpg);
+        background-size: cover;       /* ← 画面に合わせて拡大縮小（縦横比を維持） */
+        background-position: center;  /* ← 画像の中央を基準に表示 */
+        background-repeat: no-repeat; /* ← 画像の繰り返しを防ぐ */
+      }
 
-      /* 以下フッダー */
+.migi {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.hidari {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* 見出し */
+#subheading h1 {
+  margin-left: 20px;
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  padding-left: 15px;
+  border-left: 5px solid #c9a86a;
+}
+
+/* Swiper */
+.swiper {
+  width: 400px;
+  height: 250px;
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* メンバーカード */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.member-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.member-photo {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+/* フッター */
 footer {
-  background-color: #64072A;   /* 背景色 */
-  color: #ffffff;              /* 文字色 */
-  padding: 20px;               /* 内側余白 */
+background-color: #64072A;   /* 背景色 */
+  color: #fff;
+  padding: 20px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between; /* 左右に配置 */
-  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;                /* 中央寄せ */
+  margin: 0 auto;
 }
 
 footer nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  padding: 0;
 }
 
 footer nav ul li {
@@ -82,14 +163,14 @@ footer nav ul li {
 }
 
 footer nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
+
 footer nav ul li a:hover {
-  color: #ff9800; /* ホバー時に色が変わる */
+  color: #ff9800;
 }
-/*以上フッダー*/
 
 /* トップへ戻る */
 .to-top {
@@ -117,7 +198,7 @@ footer nav ul li a:hover {
   background: #8a0a3c;
 }
 
-/* 歯車ボタン */
+ /* 歯車ボタン */
   .gear-btn {
     position: fixed;
     top: 20px;
@@ -223,15 +304,4 @@ footer nav ul li a:hover {
     opacity: 1;
     pointer-events: auto;
   }
-
-  /* 見出し */
-#subheading h1 {
-  margin-left: 20px;
-  margin-top: 100px;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
-  padding-left: 15px;
-  border-left: 5px solid #c9a86a;
-} 
 

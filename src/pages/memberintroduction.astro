@@ -22,15 +22,9 @@
             <li><a href="/lukiaguide" id="migi">案内</a></li>
             <li><a href="" id="migi">お問い合わせ</a></li>
           </ul>
-<<<<<<< HEAD
         </nav>
       <div id="overlay" class="overlay"></div>
   </header>
-=======
-  </nav>
-   <div id="overlay" class="overlay"></div>
-</header>
->>>>>>> c90b32faac23e733e3ef628d6818cf8628e8be81
 
 <!-- 見出し -->
 <div id="subheading">
@@ -116,19 +110,19 @@
 
 <!-- フッター -->
 <footer>
-  <div class="footer-container">
-    <p>&copy; 2026 TUSbotchanlab.website.</p>
-    <nav>
-      <ul>
-            <li><a href="/index" id="hidari">HOME</a></li>
-            <li><a href="/Yu_activity" id="hidari">活動内容</a></li>
-            <li><a href="/memberintroduction" id="hidari">メンバー</a></li>
-            <li><a href="/lukiaguide" id="hidari">案内</a></li>
-            <li><a href="/inquiry" id="hidari">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </div>
-</footer>
+    <div class="footer-container">
+      <p>&copy; 2026 TUSbotchanlab.website.</p>
+      <nav>
+        <ul>
+            <li><a href="/index" id="migi">HOME</a></li>
+            <li><a href="/Yu_activity" id="migi">活動内容</a></li>
+            <li><a href="/memberintroduction" id="migi">メンバー</a></li>
+            <li><a href="/lukiaguide" id="migi">案内</a></li>
+            <li><a href="/inquiry" id="migi">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 
 <!-- 以下ハンバーガーのjs -->
 <script is:inline>
@@ -258,19 +252,6 @@ header
         background-repeat: no-repeat; /* ← 画像の繰り返しを防ぐ */
       }
 
-<<<<<<< HEAD
-=======
-.migi {
-  color: #000000;
-  text-decoration: none;
-  margin-right: 15px;
-}
-.hidari {
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 15px;
-}
->>>>>>> c90b32faac23e733e3ef628d6818cf8628e8be81
 
 /* 見出し */
 #subheading h1 {
@@ -330,22 +311,24 @@ header
 
 /* フッター */
 footer {
-  background-color: #24140e;
-  color: #fff;
-  padding: 20px;
+  background-color: #64072A;   /* 背景色 */
+  color: #ffffff;              /* 文字色 */
+  padding: 20px;               /* 内側余白 */
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 左右に配置 */
+  align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto;                /* 中央寄せ */
 }
 
 footer nav ul {
   list-style: none;
-  display: flex;
+  margin: 0;
   padding: 0;
+  display: flex;
 }
 
 footer nav ul li {
@@ -353,13 +336,12 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-  color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  color: #ffffff;
+  transition: color 0.3s;
 }
-
 footer nav ul li a:hover {
-  color: #ff9800;
+  color: #ff9800; /* ホバー時に色が変わる */
 }
 
 /* トップへ戻る */
@@ -388,11 +370,7 @@ footer nav ul li a:hover {
   background: #8a0a3c;
 }
 
-<<<<<<< HEAD
-  /* 歯車ボタン */
-=======
  /* 歯車ボタン */
->>>>>>> c90b32faac23e733e3ef628d6818cf8628e8be81
   .gear-btn {
     position: fixed;
     top: 20px;
@@ -409,13 +387,8 @@ footer nav ul li a:hover {
     color: #dfc0c0;
     transition: transform 0.6s ease;
   }
-<<<<<<< HEAD
 
   /* 開いたら回転 */
-=======
-    
-   /* 開いたら回転 */
->>>>>>> c90b32faac23e733e3ef628d6818cf8628e8be81
   .gear-btn.active .gear {
     transform: rotate(180deg);
   }

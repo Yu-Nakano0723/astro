@@ -15,7 +15,7 @@
 
 .category {
   flex: 1;
-  background: #7aaa7a;
+  background: #a9b092;
   padding: 20px;
   border-radius: 12px;
 }
@@ -64,7 +64,7 @@
 
   .radius {
     border-radius: 20px;
-    background-color: #71ec90;
+    background-color: #858a86;
     color: #161f35;
     overflow: hidden;
     height: 0;

@@ -79,13 +79,38 @@
     </div>
   </footer>
 
+<!-- トップに戻るボタン -->
 <a href="#" class="to-top" id="toTop">▲</a>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
-      <!-- 以下ハンバーガーのjs -->
+<!-- JS -->
+<script defer>
+  window.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      effect: 'fade',
+      speed: 1000,
+      autoplay: { delay: 3000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  });
+
+  const toTop = document.getElementById("toTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTop.classList.add("show");
+    } else {
+      toTop.classList.remove("show");
+    }
+  });
+</script>
+
+  <!-- 以下ハンバーガーのjs -->
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("menuBtn");

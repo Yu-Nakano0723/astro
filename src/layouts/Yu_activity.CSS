@@ -103,40 +103,6 @@
   color:#333;
   background:white;
 }
-header
-    {position:fixed;        /*画面上部に固定*/
-     top:0px;
-     left:0px;
-     width:100%;            /*帯の長さ*/
-     height:80px;           /*ヘッダーの文字下の空間*/
-     background-color:#64072A; /*帯の色*/
-     color:white;         /*タイトルの文字の色*/ 
-     display: flex;                  /* 横並びにする */
-     align-items: center;    /* 垂直中央 */
-     padding:   0 30px;        /* 上下　左右の余白 */
-     box-sizing: border-box; /* widthとpaddingが重なると見切れるからこれで枠内に収める */
-     z-index: 1000;          /* 最前面 */
-     flex-wrap: wrap; /* ← ここで複数行許可 */}
-
-     .logo /*左側の文字に関する指示*/
-      { font-size: 30px;   /* 大きさ調整 */
-      font-weight: bold; /* 太字に */
-      letter-spacing: 2px; /* 文字の間隔を少し広げる */
-      white-space: nowrap; /* ロゴの改行防止 */}
-
-     nav {
-      display: flex;
-      margin-left: auto;}
-      #hidari{
-        color:#ffffff;
-        text-decoration:none;
-        margin-right: 15px;}
-
-      #migi{
-        color:#000000;
-        text-decoration:none;
-        margin-right: 15px;}
-
       @media (max-width: 700px) /*条件指定できる*/
       {
       header 
@@ -175,42 +141,6 @@ header
         top :100px;
         left :100px;
       }
-
-  /* 以下フッダー */
-footer 
-{
-  background-color: #64072A;   /* 背景色 */
-  color: #ffffff;              /* 文字色 */
-  padding: 20px;               /* 内側余白 */
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between; /* 左右に配置 */
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;                /* 中央寄せ */
-}
-
-footer nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-footer nav ul li {
-  margin-left: 20px;
-}
-
-footer nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s;
-}
-footer nav ul li a:hover {
-  color: #ff9800; /* ホバー時に色が変わる */
-}
 
   /* 歯車ボタン */
   .gear-btn {
@@ -405,80 +335,4 @@ footer nav ul li a:hover {
     width:35px;
     height:35px;
   }
-
-    /* ----------------
-     メニュー
-  ---------------- */
-
-  /* メニュー本体 */
-  .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 80vh;
-    background-image: url("/kim_rogo.png"); /* ここを写真パスに変更 */
-    background-size: contain;        /* 全体にフィット */
-    background-position: center 20%;   /* 中央表示 */
-    background-repeat: no-repeat;
-    background-color: #ffffff;
-    min-height: 100vh;
-    color: rgb(5, 33, 12);
-    padding: 60px 40px;
-    font-size: 200px;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    z-index: 1000;
-  }
-  /* 左側を白くフェード */
-.menu::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0.95) 0%,
-    rgba(255,255,255,0.7) 25%,
-    rgba(255,255,255,0.3) 45%,
-    rgba(255,255,255,0) 65%
-  );
-  pointer-events: none;
-}
-
-  .menu.open {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  .menu ul {
-    list-style: none;
-    padding: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .menu li {
-    margin-bottom: 24px;
-    font-size: 1.2rem;
-  }
-
-    /* ----------------
-     footer
-  ---------------- */
-
-  .footer-container{
-    flex-direction:column;
-    text-align:center;
-    gap:10px;
-  }
-
-  footer nav ul{
-    flex-direction:column;
-  }
-
-  footer nav ul li{
-    margin:5px 0;
-  }
-
 }

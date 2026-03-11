@@ -27,25 +27,16 @@ header
       #hidari{
         color:#ffffff;
         text-decoration:none;
-        margin-right: 15px;}
+        margin-right: 15px;
+      }
+      #hidari:hover {
+        transform: translateY(-6px);
+      }
 
       #migi{
         color:#000000;
         text-decoration:none;
         margin-right: 15px;}
-
-      @media (max-width: 700px) /*条件指定できる*/
-      {
-      header 
-      {justify-content: center; /* 中央寄せ */
-        height: auto;           /* 高さ自動 */
-        }
-
-      nav 
-      {width: 100%; /* 2行目に全幅で配置 */
-       justify-content: center;
-       margin-top: 8px;
-      }}
 
       body{padding-top:40px}
 
@@ -78,7 +69,7 @@ footer
 {
   background-color: #64072A;   /* 背景色 */
   color: #ffffff;              /* 文字色 */
-  padding: 20px;               /* 内側余白 */
+  padding: 5px;               /* 内側余白 */
 }
 
 .footer-container {
@@ -94,10 +85,6 @@ footer nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-}
-
-footer nav ul li {
-  margin-left: 20px;
 }
 
 footer nav ul li a {
@@ -216,15 +203,17 @@ footer nav ul li a:hover {
     pointer-events: auto;
   }
 
-/* 見出し */
-#subheading h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
-  padding-left: 15px;
-  border-left: 5px solid #c9a86a;
-} 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+    header 
+      {justify-content: center; /* 中央寄せ */
+        height: auto;           /* 高さ自動 */
+        }
+
+    nav 
+      {width: 100%; /* 2行目に全幅で配置 */
+       justify-content: center;
+       margin-top: 8px;
+      }
     .gear{
     width:36px;
     height:36px;
@@ -279,6 +268,8 @@ footer nav ul li a:hover {
   }
 
   .menu ul {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     list-style: none;
     padding: 0;
     position: relative;
@@ -296,16 +287,12 @@ footer nav ul li a:hover {
 
   .footer-container{
     flex-direction:column;
-    text-align:center;
     gap:10px;
   }
 
   footer nav ul{
+    justify-content: center; /* 中央寄せ */
     flex-direction:column;
+    text-align:center;
   }
-
-  footer nav ul li{
-    margin:5px 0;
-  }
-
 }

@@ -49,20 +49,32 @@
     </div>
   	</footer>
 
-	<!-- 以下ハンバーガーのjs -->
-	<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("menu");
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
 
-    if (!btn || !menu) return;
+  if (!btn || !menu) return;
 
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("active");
-      menu.classList.toggle("open");
-    });
+  // 歯車クリック
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // 外側クリックと判定されないように
+    btn.classList.toggle("active");
+    menu.classList.toggle("open");
   });
-	</script>
+
+  // メニュー内クリックは閉じない
+  menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // 画面のどこかクリック → メニュー閉じる
+  document.addEventListener("click", () => {
+    btn.classList.remove("active");
+    menu.classList.remove("open");
+  });
+});
+</script>
 </body>
 
 </html>

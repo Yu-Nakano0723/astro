@@ -1,0 +1,48 @@
+<!DOCTYPE html><html> <head><meta charset="UTF-8"><title>東京理科大学,坊ちゃんサークル</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><link rel="icon" type="image/png" href="/astro/坊ちゃんLab.アイコン改.png"><style>@charset "UTF-8";header{position:fixed;top:0;left:0;width:100%;height:80px;background-color:#64072a;color:#fff;display:flex;align-items:center;padding:0 30px;box-sizing:border-box;z-index:1000;flex-wrap:wrap}.logo{font-size:30px;font-weight:700;letter-spacing:2px;white-space:nowrap}nav{display:flex;margin-left:auto}#hidari{color:#fff;text-decoration:none;margin-right:15px}#hidari:hover{transform:translateY(-6px)}#migi{color:#000;text-decoration:none;margin-right:15px}body{padding-top:40px}.eyecatch{height:600px;background-image:url(/astro/昔のディスコードから持ってきた写真.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;min-height:600px;display:flex;align-items:center;width:100%;height:auto;mask-image:linear-gradient(to bottom,#000 95%,#0000)}body{margin:10px}.start{padding:50px;font-size:50px;font-weight:700;color:#000;-webkit-text-stroke:1px white}.pic{position:relative;top:100px;left:100px}footer{background-color:#64072a;color:#fff;padding:5px}.footer-container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}footer nav ul{list-style:none;margin:0;padding:0;display:flex}footer nav ul li a{text-decoration:none;color:#fff;transition:color .3s}footer nav ul li a:hover{color:#ff9800}.gear-btn{position:fixed;top:20px;right:20px;background:none;border:none;cursor:pointer;z-index:1001}.gear{width:48px;height:48px;color:#dfc0c0;transition:transform .6s ease}.gear-btn.active .gear{transform:rotate(180deg)}.menu-btn{position:fixed;top:20px;right:20px;background:none;border:none;z-index:1001;cursor:pointer}.menu-btn img{width:40px}.menu{position:absolute;top:100%;left:0;width:100%;height:60vh;box-sizing:border-box;background-image:url(/astro/坊ちゃんラボ.png);background-size:contain;background-position:center 20%;background-repeat:no-repeat;background-color:#fff;padding:60px 40px;transform:translateY(-100%);opacity:0;transition:transform .4s ease,opacity .4s ease;z-index:1000}.menu.open{transform:translateY(0);opacity:1}.menu:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,#64072a,#64072ab3,#64072a4d,#64072a00 7.5%,#fff0 60%,#fff9,#fffffff2);pointer-events:none}.menu ul{list-style:none;padding:0;font-size:20.5px;flex-wrap:nowrap;display:flex;justify-content:center;gap:40px;position:absolute;bottom:40px;left:50%;transform:translate(-50%)}.overlay{position:fixed;inset:0;background:#0006;opacity:0;pointer-events:none;transition:opacity .4s ease;z-index:999}.overlay.show{opacity:1;pointer-events:auto}@media(max-width:700px){header{justify-content:center;height:auto}nav{width:100%;justify-content:center;margin-top:8px}.gear{width:36px;height:36px}.gear-btn{position:absolute;top:4px;right:15px}#subheading h1{margin-top:10px}.menu{background-image:url(/astro/kim_rogo.png);background-size:cover;background-position:center;position:fixed;top:35.5px;width:100%;height:60vh}.menu.open{transform:translateY(0);opacity:1}.menu ul{display:flex;justify-content:center;gap:20px;flex-wrap:nowrap;top:85%}.menu ul li a{white-space:nowrap}.menu:before{background:linear-gradient(to bottom,rgba(100,7,42,1) 0%,rgba(100,7,42,.7) 6%,rgba(100,7,42,.3) 12%,rgba(100,7,42,0) 18% rgba(255,255,255,0) 88%,rgba(255,255,255,.6) 94%,rgba(255,255,255,.95) 100%)}.footer-container{flex-direction:column;gap:10px}footer nav ul{justify-content:center;flex-direction:column;text-align:center}}
+@charset "UTF-8";.migi{color:#000;text-decoration:none;margin-right:15px}.hidari{color:#fff;text-decoration:none;margin-right:15px}#subheading h1{margin-left:20px;margin-top:60px;font-size:2rem;font-weight:600;color:#222;padding-left:15px;border-left:5px solid #c9a86a}.swiper{width:400px;height:250px;margin-left:15px;margin-right:auto}.swiper-slide img{width:100%;height:100%;object-fit:cover}.members-grid{justify-content:center;flex-wrap:wrap;width:100%;height:200%;background-size:cover;background-position:center;background-repeat:no-repeat;min-height:900px;display:flex;align-items:center;gap:30px;max-width:1000px;margin:40px auto}.member-card{background:#fff;border-radius:18px;padding:30px 25px;text-align:center;box-shadow:0 8px 25px #00000014;transition:.3s}.member-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px #0000001f}.member-photo{width:400px;height:250px;object-fit:cover;border-radius:10px;margin-bottom:18px}
+</style></head> <body> <!--ヘッダー--> <header> <div class="logo">坊ちゃんサークル</div> <button id="menuBtn" class="gear-btn" aria-label="メニュー"> <!-- 歯車SVG --> <svg viewBox="0 0 24 24" class="gear"> <path fill="currentColor" d="M19.14,12.94A7.43,7.43,0,0,0,19.2,12a7.43,7.43,0,0,0-.06-.94l2.11-1.65a.5.5,0,0,0,.12-.63l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a7.28,7.28,0,0,0-1.63-.94l-.38-2.65A.5.5,0,0,0,13.77,2H10.23a.5.5,0,0,0-.49.42L9.36,5.07a7.28,7.28,0,0,0-1.63.94l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.5.5,0,0,0,.12.63L4.86,11.06A7.43,7.43,0,0,0,4.8,12a7.43,7.43,0,0,0,.06.94L2.75,14.59a.5.5,0,0,0-.12.63l2,3.46a.5.5,0,0,0,.6.22l2.49-1a7.28,7.28,0,0,0,1.63.94l.38,2.65a.5.5,0,0,0,.49.42h3.54a.5.5,0,0,0,.49-.42l.38-2.65a7.28,7.28,0,0,0,1.63-.94l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.5.5,0,0,0-.12-.63ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"></path> </svg> </button> <nav id="menu" class="menu"> <ul> <li><a href="/" id="migi">HOME</a></li> <li><a href="/Yu_activity/" id="migi">活動内容</a></li> <li><a href="/memberintroduction/" id="migi">メンバー</a></li> <li><a href="/lukiaguide/" id="migi">案内</a></li> <li><a href="/inquiry/" id="migi">お問い合わせ</a></li> </ul> </nav> <div id="overlay" class="overlay"></div> </header> <main>   <div id="subheading"> <h1>メンバー紹介</h1> </div>  <div class="members-grid"> <div class="member-card"> <img src="/astro/ゆきひろさん.jpg" alt="メンバー1" class="member-photo"> <h2>大野倖寛(部長)</h2> <p>学年：3年</p> <p>学科：生命システム工学科</p> <p>趣味：iGEM</p> <p>出身：大分</p> <p>GOLD Medal を目指してiGEM走り抜けましょう！</p> </div> <div class="member-card"> <img src="/astro/高山.jpg" alt="メンバー1" class="member-photo"> <h2>高山翔那</h2> <p>学年：3年</p> <p>学科：生命創薬科学科</p> </div> <div class="member-card"> <img src="/astro/金さん.jpg" alt="メンバー2" class="member-photo"> <h2>金唯真(副部長)</h2> <p>学年：2年</p> <p>学科：生命生物科学科</p> <p>趣味：絵画</p> <p>出身：中国</p> </div> <div class="member-card"> <div class="swiper"> <div class="swiper-wrapper"> <div class="swiper-slide"> <img src="/astro/るきあさん１.jpg" alt="画像1"> </div> <div class="swiper-slide"> <img src="/astro/るきあさん２.jpg" alt="画像2"> </div> <div class="swiper-slide"> <img src="/astro/るきあさん３.jpg" alt="画像3"> </div> </div> <div class="swiper-pagination"></div> </div> <h2>南雲ルキア</h2> <p>学年：2年</p> <p>学科：生命システム工学科</p> <p>趣味:推し活(ディズニー、西洋絵画)、アニメ、マンガ</p> <p>出身：千葉県</p> </div> <div class="member-card"> <img src="/astro/なかゆ.jpg" alt="メンバー4" class="member-photo"> <h2>Y.N.</h2> <p>学年：2年</p> <p>学科：物理工学科</p> <p>趣味:トロコイド</p> <p>出身：日本</p> </div> <div class="member-card"> <img src="/astro/たなかさん.jpg" alt="メンバー5" class="member-photo"> <h2>田中祐之眞</h2> <p>学年：2年</p> <p>学科：生命生物科学科</p> <p>出身:青森</p> </div> </div>  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>  <script defer>
+  window.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      effect: 'fade',
+      speed: 1000,
+      autoplay: { delay: 3000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  });
+
+  const toTop = document.getElementById("toTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTop.classList.add("show");
+    } else {
+      toTop.classList.remove("show");
+    }
+  });
+</script>  </main> <footer> <div class="footer-container"> <p>&copy; 2026 TUSbotchanlab.website.</p> <nav> <ul> <li><a href="/" id="hidari">ホーム</a></li> <li><a href="/Yu_activity/" id="hidari">活動内容</a></li> <li><a href="/memberintroduction/" id="hidari">メンバー</a></li> <li><a href="/lukiaguide/" id="hidari">案内</a></li> <li><a href="/inquiry/" id="hidari">お問い合わせ</a></li> <li><a href="https://www.instagram.com/p/C5gFhBsyfnq/?igsh=MTV6NWtncm5xb3JsNw==" target="_blank"> <img src="/astro/インスタ.jpg" alt="Instagram" width="40"> </a></li> <li><a href="https://lin.ee/H21QtuM" target="_blank"> <img src="/astro/line.jpg" alt="LINE" width="40"> </a></li></ul><a href="https://lin.ee/H21QtuM" target="_blank"></a></nav><a href="https://lin.ee/H21QtuM" target="_blank"></a></div><a href="https://lin.ee/H21QtuM" target="_blank"></a></footer><a href="https://lin.ee/H21QtuM" target="_blank"> <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  if (!btn || !menu) return;
+
+  // 歯車クリック
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // 外側クリックと判定されないように
+    btn.classList.toggle("active");
+    menu.classList.toggle("open");
+  });
+
+  // メニュー内クリックは閉じない
+  menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // 画面のどこかクリック → メニュー閉じる
+  document.addEventListener("click", () => {
+    btn.classList.remove("active");
+    menu.classList.remove("open");
+  });
+});
+</script> </a> </body></html>

@@ -56,14 +56,9 @@
         background-size: cover;       /* ← 画面に合わせて拡大縮小（縦横比を維持） */
         background-position: center;  /* ← 画像の中央を基準に表示 */
         background-repeat: no-repeat; /* ← 画像の繰り返しを防ぐ */
-        width: 100%;
         min-height: 900px;    /* height ではなく min-height */
-        display: flex;
         align-items: center; /* 縦中央 */
-        width: 100%;
-        height: auto;
         background-image:url(../../public/main.png);
-         
       }
       
       .element{

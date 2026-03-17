@@ -181,9 +181,11 @@ footer nav ul li a:hover {
   pointer-events: none;
 }
 .menu ul {
+
   list-style: none;
   padding: 0;
-  font-size: large;
+  font-size: 20.5px;
+  flex-wrap:nowrap;   /* 折り返さない */
   display: flex;              /* 横並び */
   justify-content: center;    /* 中央揃え */
   gap: 40px;                  /* メニュー間隔 */
